@@ -1,24 +1,23 @@
 name: 0004 wf
 on:
-  push: 
+  push:
     branches:
       - develop
-  pull_request: 
-    branches: 
+  pull_request:
+    branches:
       - develop
+
 jobs:
   build:
-    runs-on: ubunto-latest
-    steps: 
+    runs-on: ubuntu-latest
+    steps:
       - name: system cmd
         run: echo "system command running."
     
       - name: checkout my repo
         uses: actions/checkout@v4
+
       - name: 0004 repo info
         run: |
-          Repostory name: ${{github.Repository}}
-          Repostory owner: ${{github.Repository_owner}}
-          
-
-
+          echo "Repository name: ${{ github.repository }}"
+          echo "Repository owner: ${{ github.repository_owner }}"
