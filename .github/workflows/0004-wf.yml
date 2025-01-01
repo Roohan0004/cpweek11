@@ -1,0 +1,24 @@
+name: 0004 wf
+on:
+  push: 
+    branches:
+      - develop
+  pull_request: 
+    branches: 
+      - develop
+jobs:
+  build:
+    runs-on: ubunto-latest
+    steps: 
+      - name: system cmd
+        run: echo "system command running."
+    
+      - name: checkout my repo
+        uses: checkout@v4
+      - name: 0004 repo info
+        run: |
+          Repostory name: ${{Repostory}}
+          Repostory owner: ${{Repostory_owner}}
+          
+
+
