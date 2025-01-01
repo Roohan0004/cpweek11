@@ -17,8 +17,8 @@ jobs:
         uses: actions/checkout@v4
       - name: 0004 repo info
         run: |
-          Repostory name: ${{Repostory}}
-          Repostory owner: ${{Repostory_owner}}
+          Repostory name: ${{github.Repository}}
+          Repostory owner: ${{github.Repository_owner}}
           
 
 
