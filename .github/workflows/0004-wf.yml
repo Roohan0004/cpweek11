@@ -14,7 +14,7 @@ jobs:
         run: echo "system command running."
     
       - name: checkout my repo
-        uses: checkout@v4
+        uses: actions/checkout@v4
       - name: 0004 repo info
         run: |
           Repostory name: ${{Repostory}}
